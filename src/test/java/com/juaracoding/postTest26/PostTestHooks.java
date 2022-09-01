@@ -10,6 +10,7 @@ import com.juaracoding.pageobject.utils.TestScenarioShop;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 
+import io.cucumber.java.After;
 import io.cucumber.java.AfterAll;
 import io.cucumber.java.Before;
 
@@ -26,6 +27,12 @@ public class PostTestHooks {
 		TestScenarioShop[] tests = TestScenarioShop.values();
 		extentest = reports.startTest(tests[ShopUtils.testShopCount].getTestShopName());
 		ShopUtils.testShopCount++;
+	}
+	
+	@After
+	public void closeObject() {
+		reports.endTest(extentest);
+		reports.flush();
 	}
 	
 	@AfterAll
