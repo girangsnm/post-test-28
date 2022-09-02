@@ -25,11 +25,11 @@ public class TestCheckout {
 		extentest = PostTestHooks.extentest;
 	}
 	
-	@When("User go to web shoptools")
+	@When("User go to web shoptools1")
 	public void user_go_to_web_shoptools() {
 		driver = DriverSingleton.getDriver();
 		driver.get(ShopConstans.URL);
-		extentest.log(LogStatus.PASS, "User go to web shoptools");
+		extentest.log(LogStatus.PASS, "User go to web shoptools1");
 	}
 	
 	@And("User click view cart")

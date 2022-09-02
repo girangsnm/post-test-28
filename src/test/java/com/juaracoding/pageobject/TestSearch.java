@@ -1,6 +1,6 @@
 package com.juaracoding.pageobject;
 
-import static org.testng.Assert.assertEquals;
+//import static org.testng.Assert.assertEquals;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
@@ -33,14 +33,14 @@ public class TestSearch {
 	@Test
 	public void testValidSearch() {
 		shopsearch.search("Jeans");
-
+		
 	}
 	
-	@Test
-	public void addWishlist() {
-		shopsearch.wishList();
-		assertEquals(shopsearch.getTxtResult(), "WISHLIST");
-	}
+//	@Test
+//	public void addWishlist() {
+//		shopsearch.wishList();
+//		assertEquals(shopsearch.getTxtResult(), "WISHLIST");
+//	}
 
 	@AfterClass
 	public void closeBrowser() {

@@ -22,32 +22,28 @@ public class ShopSearch {
 	@FindBy(xpath = "//input[@type='search']")
 	private WebElement cariPakaian;
 
+	@FindBy(xpath = "//a[normalize-space()='blue sinner ripped knee high waist skinny jeans']")
+	private WebElement btnpilihPakaian;
+
 	@FindBy(xpath = "//div[@class='yith-wcwl-wishlistexistsbrowse']")
 	private WebElement addWishList1;
-
-	@FindBy(xpath = "//div[@class='yith-wcwl-add-to-wishlist add-to-wishlist-1400 exists wishlist-fragment on-first-load']//a[contains(text(),'Browse Wishlist')]")
-	private WebElement addWishList2;
-
-	@FindBy(xpath = "//a[normalize-space()='My Wishlist']")
-	private WebElement btnShowWishList;
-
-	@FindBy(xpath = "//h1[@class='page-title']")
-	private WebElement txtResultText;
 
 	public void search(String cariPakaian) {
 		btnSearch.click();
 		this.cariPakaian.sendKeys(cariPakaian + "\n");
-
-	}
-
-	public void wishList() {
+		btnpilihPakaian.click();
 		addWishList1.click();
-		addWishList2.click();
-		btnShowWishList.click();
+
 	}
 
-	public String getTxtResult() {
-		return txtResultText.getText();
-	}
-	
+//	public void wishList() {
+//		addWishList1.click();
+//		addWishList2.click();
+//		btnShowWishList.click();
+//	}
+
+//	public String getTxtResult() {
+//		return txtResultText.getText();
+//	}
+
 }

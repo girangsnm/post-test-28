@@ -38,10 +38,10 @@ public class TestSearch2 {
 		extentest.log(LogStatus.PASS, "User click button search");
 	}
 	
-	@And("User enter type of clothes2")
+	@And("User enter type of clothess2")
 	public void user_enter_type_of_clothes2() {
 		searchpage2.typeClothes("jeans");
-		extentest.log(LogStatus.PASS, "User enter type of clothes2");
+		extentest.log(LogStatus.PASS, "User enter type of clothess2");
 	}
 	
 	@And("User click clothes")
